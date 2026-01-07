@@ -47,16 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        warm: {
-          brown: "hsl(var(--warm-brown))",
-          cream: "hsl(var(--soft-cream))",
+        forest: {
+          DEFAULT: "hsl(var(--forest-green))",
+          light: "hsl(var(--sage-light))",
         },
-        golden: {
-          DEFAULT: "hsl(var(--primary))",
-          light: "hsl(var(--golden-light))",
+        mint: {
+          DEFAULT: "hsl(var(--soft-mint))",
         },
         leaf: "hsl(var(--leaf-green))",
-        paw: "hsl(var(--paw-orange))",
+        paw: "hsl(var(--paw-gold))",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
