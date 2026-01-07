@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,14 +18,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-2xl">🐾</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-xl text-foreground">Pata & Prosa</span>
-              <span className="text-xs text-muted-foreground -mt-1">Pet Friendly</span>
-            </div>
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="Pata & Prosa - Espaço de Convivência" className="h-14" />
           </a>
 
           {/* Desktop Navigation */}
