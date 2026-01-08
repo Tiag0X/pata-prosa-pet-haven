@@ -7,13 +7,56 @@ import serviceHotel from "@/assets/service-hotel.jpg";
 import serviceCafe from "@/assets/service-cafe.jpg";
 import serviceVet from "@/assets/service-vet.jpg";
 
+const SpeechBubbleImage = ({ 
+  src, 
+  alt, 
+  className = "",
+  tailPosition = "none" 
+}: { 
+  src: string; 
+  alt: string; 
+  className?: string;
+  tailPosition?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | "none";
+}) => {
+  return (
+    <div className={`relative ${className}`}>
+      <div className="bg-card p-1.5 rounded-[20px] shadow-card overflow-hidden">
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full rounded-[16px] object-cover"
+        />
+      </div>
+      {/* Speech bubble tails */}
+      {tailPosition === "bottom-left" && (
+        <div className="absolute -bottom-2 left-4 w-4 h-4 bg-card rounded-full" />
+      )}
+      {tailPosition === "bottom-right" && (
+        <div className="absolute -bottom-2 right-4 w-4 h-4 bg-card rounded-full" />
+      )}
+      {tailPosition === "top-left" && (
+        <div className="absolute -top-2 left-4 w-4 h-4 bg-card rounded-full" />
+      )}
+      {tailPosition === "top-right" && (
+        <div className="absolute -top-2 right-4 w-4 h-4 bg-card rounded-full" />
+      )}
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-[hsl(var(--soft-mint))]">
-      {/* Decorative shapes */}
-      <div className="absolute top-32 left-8 w-16 h-24 bg-primary/20 rounded-full rotate-12" />
-      <div className="absolute bottom-24 left-16 w-12 h-8 bg-accent/30 rounded-full" />
-      <div className="absolute top-1/2 right-4 w-6 h-6 bg-primary/30 rounded-full" />
+      {/* Decorative squiggles */}
+      <svg className="absolute top-40 left-12 w-6 h-6 text-primary/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 12c2-2 4-2 6 0s4 2 6 0" />
+      </svg>
+      <svg className="absolute bottom-40 left-20 w-5 h-5 text-primary/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 12c2-2 4-2 6 0s4 2 6 0" />
+      </svg>
+      <svg className="absolute top-1/3 right-8 w-5 h-5 text-primary/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 12c2-2 4-2 6 0s4 2 6 0" />
+      </svg>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -48,91 +91,71 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image Collage */}
-          <div className="relative h-[500px] md:h-[600px]">
-            {/* Main large image - center */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 md:w-80">
-              <div className="relative">
-                <div className="absolute -top-3 -left-3 w-6 h-6 border-l-4 border-t-4 border-primary rounded-tl-lg" />
-                <img
-                  src={heroImage}
-                  alt="Golden Retriever feliz"
-                  className="w-full rounded-3xl shadow-elevated object-cover aspect-[3/4]"
-                />
-              </div>
-            </div>
+          {/* Image Collage - Speech Bubble Style */}
+          <div className="relative h-[520px] md:h-[580px] lg:h-[620px]">
+            {/* Row 1 - Top */}
+            <SpeechBubbleImage
+              src={serviceDaycare}
+              alt="Golden Retriever deitado"
+              className="absolute top-0 left-0 w-32 md:w-40 aspect-[4/3]"
+              tailPosition="bottom-left"
+            />
+            <SpeechBubbleImage
+              src={serviceCafe}
+              alt="Bulldog francês no sofá"
+              className="absolute top-0 left-36 md:left-44 w-28 md:w-32 aspect-square"
+              tailPosition="bottom-right"
+            />
+            <SpeechBubbleImage
+              src={serviceVet}
+              alt="Pessoa com gato"
+              className="absolute top-0 right-0 w-28 md:w-36 aspect-[3/4]"
+              tailPosition="bottom-left"
+            />
 
-            {/* Top right image */}
-            <div className="absolute top-0 right-0 w-32 md:w-44">
-              <div className="bg-card p-2 rounded-2xl shadow-card">
-                <img
-                  src={serviceCafe}
-                  alt="Pet no café"
-                  className="w-full rounded-xl object-cover aspect-square"
-                />
-              </div>
-            </div>
+            {/* Row 2 - Middle */}
+            <SpeechBubbleImage
+              src={heroImage}
+              alt="Golden Retriever sorrindo - destaque"
+              className="absolute top-28 md:top-32 left-8 md:left-12 w-44 md:w-56 aspect-square z-10"
+              tailPosition="bottom-right"
+            />
+            <SpeechBubbleImage
+              src={serviceBath}
+              alt="Bulldog francês sentado"
+              className="absolute top-24 md:top-28 right-4 w-32 md:w-40 aspect-[3/4]"
+              tailPosition="bottom-left"
+            />
 
-            {/* Top right second image */}
-            <div className="absolute top-28 md:top-36 right-0 w-28 md:w-36">
-              <div className="bg-card p-2 rounded-2xl shadow-card">
-                <img
-                  src={serviceVet}
-                  alt="Gato sendo cuidado"
-                  className="w-full rounded-xl object-cover aspect-square"
-                />
-              </div>
-            </div>
-
-            {/* Bottom left image */}
-            <div className="absolute bottom-20 left-0 w-28 md:w-36">
-              <div className="bg-card p-2 rounded-2xl shadow-card">
-                <img
-                  src={serviceDaycare}
-                  alt="Cachorro na creche"
-                  className="w-full rounded-xl object-cover aspect-square"
-                />
-              </div>
-            </div>
-
-            {/* Bottom right image */}
-            <div className="absolute bottom-0 right-8 w-28 md:w-36">
-              <div className="bg-card p-2 rounded-2xl shadow-card">
-                <img
-                  src={serviceBath}
-                  alt="Cachorro feliz"
-                  className="w-full rounded-xl object-cover aspect-square"
-                />
-              </div>
-            </div>
-
-            {/* Bottom center image */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/4 w-24 md:w-32">
-              <div className="bg-card p-2 rounded-2xl shadow-card">
-                <img
-                  src={serviceHotel}
-                  alt="Pet brincando"
-                  className="w-full rounded-xl object-cover aspect-square"
-                />
-              </div>
-            </div>
+            {/* Row 3 - Bottom */}
+            <SpeechBubbleImage
+              src={serviceHotel}
+              alt="Bulldog e gato juntos"
+              className="absolute bottom-16 md:bottom-20 left-0 w-36 md:w-44 aspect-[4/3]"
+              tailPosition="top-right"
+            />
+            <SpeechBubbleImage
+              src={serviceDaycare}
+              alt="Cachorros brincando"
+              className="absolute bottom-0 left-32 md:left-40 w-36 md:w-44 aspect-[16/9]"
+              tailPosition="top-left"
+            />
+            <SpeechBubbleImage
+              src={serviceBath}
+              alt="Cachorro feliz"
+              className="absolute bottom-8 right-0 w-32 md:w-40 aspect-square"
+              tailPosition="top-left"
+            />
 
             {/* Badge +1000 */}
-            <div className="absolute bottom-32 right-0 bg-card rounded-2xl shadow-card px-5 py-3 flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                <PawPrint className="w-6 h-6 text-primary" />
+            <div className="absolute bottom-28 md:bottom-32 right-8 md:right-16 bg-card rounded-2xl shadow-card px-4 py-2.5 flex items-center gap-3 z-20">
+              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                <PawPrint className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="font-bold text-2xl text-foreground">+1000</p>
-                <p className="text-sm text-muted-foreground">Pets felizes</p>
+                <p className="font-bold text-xl text-foreground">+1000</p>
+                <p className="text-xs text-muted-foreground">Pets felizes</p>
               </div>
-            </div>
-
-            {/* Decorative speech bubble tails */}
-            <div className="absolute top-16 right-36 w-4 h-4">
-              <svg viewBox="0 0 20 20" fill="hsl(var(--card))">
-                <path d="M0 0 Q10 10 20 0 Q10 5 0 0" />
-              </svg>
             </div>
           </div>
         </div>
