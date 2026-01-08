@@ -1,11 +1,11 @@
 import { Check, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 
-import serviceBath from "@/assets/service-bath.jpg";
-import serviceDaycare from "@/assets/service-daycare.jpg";
-import serviceHotel from "@/assets/service-hotel.jpg";
-import serviceCafe from "@/assets/service-cafe.jpg";
-import serviceVet from "@/assets/service-vet.jpg";
+import serviceBath from "../assets/service-bath.jpg";
+import serviceDaycare from "../assets/service-daycare.jpg";
+import serviceHotel from "../assets/service-hotel.jpg";
+import serviceCafe from "../assets/service-cafe.jpg";
+import serviceVet from "../assets/service-vet.jpg";
 
 const Services = () => {
   const services = [

@@ -1,27 +1,45 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Services from './components/Services';
+import Differentials from './components/Differentials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const queryClient = new QueryClient();
+export default function App() {
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = totalScroll / windowHeight;
+      setScrollProgress(scroll);
+    };
 
-export default App;
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+      <div
+        className="fixed top-0 left-0 h-1 bg-[#3D7A5A] z-50 transition-all duration-100"
+        style={{ width: `${scrollProgress * 100}%` }}
+      />
+
+      <Header />
+
+      <main className="flex-grow">
+        <Hero />
+        <About />
+        <Differentials />
+        <Services />
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

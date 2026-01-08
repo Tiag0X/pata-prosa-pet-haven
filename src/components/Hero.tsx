@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { Heart, PawPrint } from "lucide-react";
-import petGoldenLying from "@/assets/pet-golden-lying.jpg";
-import petBulldogSofa from "@/assets/pet-bulldog-sofa.jpg";
-import petPersonCat from "@/assets/pet-person-cat.jpg";
-import petGoldenMain from "@/assets/pet-golden-main.jpg";
-import petBulldogSitting from "@/assets/pet-bulldog-sitting.jpg";
-import petBulldogCat from "@/assets/pet-bulldog-cat.jpg";
-import petDogsPlaying from "@/assets/pet-dogs-playing.jpg";
-import petGoldenStanding from "@/assets/pet-golden-standing.jpg";
+import petGoldenLying from "../assets/pet-golden-lying.jpg";
+import petBulldogSofa from "../assets/pet-bulldog-sofa.jpg";
+import petPersonCat from "../assets/pet-person-cat.jpg";
+import petGoldenMain from "../assets/pet-golden-main.jpg";
+import petBulldogSitting from "../assets/pet-bulldog-sitting.jpg";
+import petBulldogCat from "../assets/pet-bulldog-cat.jpg";
+import petDogsPlaying from "../assets/pet-dogs-playing.jpg";
+import petGoldenStanding from "../assets/pet-golden-standing.jpg";
 
 const SpeechBubbleImage = ({ 
   src, 
