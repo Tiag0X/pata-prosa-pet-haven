@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
           {/* Content Left */}
           <div className="space-y-10">
             <div className="space-y-6">
-              <img src="/verde.png" alt="Pata & Prosa" className="h-32 md:h-40 w-auto" />
+              <img src="/verde.png" alt="Pata & Prosa" className="hidden md:block h-32 md:h-40 w-auto" />
               <p className="text-2xl md:text-3xl text-brand-green font-bold leading-tight">
                 Seu pet merece viver momentos extraordinários.
               </p>
@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
               O espaço de convivência mais completo do bairro <strong className="text-brand-green">Auxiliadora</strong>. Banho, creche e hospedagem com atendimento humanizado e segurança em <strong className="text-brand-green">Porto Alegre</strong>.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col sm:flex-row gap-6">
               <a href="#contato" className="flex items-center justify-center bg-brand-dark text-white px-10 py-4 rounded-full font-extrabold hover:bg-brand-green transition-all shadow-2xl shadow-brand-dark/20 hover:scale-105 active:scale-95">
                 Agendar pelo WhatsApp
               </a>

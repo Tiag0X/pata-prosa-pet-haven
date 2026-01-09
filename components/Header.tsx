@@ -60,23 +60,23 @@ export const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-brand-cream border-b border-brand-green/10 shadow-lg p-4 flex flex-col gap-4 animate-fade-in-down">
+        <div className="md:hidden absolute top-20 left-0 w-full bg-brand-cream border-b border-brand-green/10 shadow-lg p-6 flex flex-col gap-6 animate-fade-in-down text-center">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-medium text-brand-dark hover:text-brand-green py-2 border-b border-gray-100"
+              className="text-xl font-medium text-brand-dark hover:text-brand-green py-2 transition-colors"
             >
               {item.label}
             </a>
           ))}
-          <div className="flex flex-col gap-4 mt-2">
+          <div className="flex flex-col gap-4 mt-4 items-center">
             <div className="flex items-center gap-2 text-brand-green font-semibold">
               <Phone size={18} />
               <span>(51) 9045-0171</span>
             </div>
-            <a href="#contato" onClick={() => setIsMenuOpen(false)} className="bg-brand-dark text-white text-center px-6 py-3 rounded-full font-bold shadow-md">
+            <a href="#contato" onClick={() => setIsMenuOpen(false)} className="bg-brand-dark text-white text-center px-8 py-3 rounded-full font-bold shadow-md w-full max-w-xs hover:bg-brand-green transition-colors">
               Agendar Visita
             </a>
           </div>

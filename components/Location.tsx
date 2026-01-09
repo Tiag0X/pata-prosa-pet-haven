@@ -53,7 +53,12 @@ export const Location: React.FC = () => {
 
           {/* Map Side */}
           <div className="order-1 lg:order-2">
-            <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-brand-cream h-[500px] relative">
+            <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-brand-cream h-[500px] relative group">
+              <div className="absolute inset-0 bg-transparent pointer-events-none lg:pointer-events-auto z-10 lg:hidden flex items-center justify-center">
+                <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-gray-600 shadow-sm opacity-0 group-active:opacity-100 transition-opacity">
+                  Use dois dedos para mover
+                </span>
+              </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3!2d-51.2!3d-30.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978255b6b6b7b%3A0x8b8b8b8b8b8b8b8b!2sRua%20Artur%20Rocha%2C%20193%20-%20Auxiliadora%2C%20Porto%20Alegre%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
                 width="100%"
@@ -63,6 +68,7 @@ export const Location: React.FC = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização Pata & Prosa"
+                className="pointer-events-auto"
               ></iframe>
             </div>
           </div>
