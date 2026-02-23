@@ -13,6 +13,10 @@ export default defineConfig(({ mode }) => {
           target: 'http://163.245.202.161:8080',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/proxy-iframe/, '')
+        },
+        '/memfs': {
+          target: 'http://163.245.202.161:8080',
+          changeOrigin: true
         }
       }
     },
