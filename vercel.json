@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/proxy-iframe/:path*",
+            "destination": "http://163.245.202.161:8080/:path*"
+        }
+    ]
+}

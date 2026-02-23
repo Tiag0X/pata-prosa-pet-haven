@@ -43,7 +43,7 @@ export default function App() {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full max-w-[1400px] mx-auto place-items-center mt-12 mb-12">
           <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
             <iframe
-              src="http://163.245.202.161:8080/e73b7ea5-f110-4031-b644-48b77b2a6a85.html"
+              src="/proxy-iframe/e73b7ea5-f110-4031-b644-48b77b2a6a85.html"
               width="640"
               height="360"
               frameBorder="0"
@@ -54,7 +54,7 @@ export default function App() {
           </div>
           <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
             <iframe
-              src="http://163.245.202.161:8080/9c1ae01d-77a8-4eed-ba26-ef908cf65c35.html"
+              src="/proxy-iframe/9c1ae01d-77a8-4eed-ba26-ef908cf65c35.html"
               width="640"
               height="360"
               frameBorder="0"
@@ -65,7 +65,7 @@ export default function App() {
           </div>
           <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
             <iframe
-              src="http://163.245.202.161:8080/e594b2b8-14ac-43f9-a867-de18fb6cfda9.html"
+              src="/proxy-iframe/e594b2b8-14ac-43f9-a867-de18fb6cfda9.html"
               width="640"
               height="360"
               frameBorder="0"
@@ -76,7 +76,7 @@ export default function App() {
           </div>
           <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
             <iframe
-              src="http://163.245.202.161:8080/70071789-b3df-4715-8c35-f3eb2aaff209.html"
+              src="/proxy-iframe/70071789-b3df-4715-8c35-f3eb2aaff209.html"
               width="640"
               height="360"
               frameBorder="0"
