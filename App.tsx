@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Services } from './components/Services';
-import { Features } from './components/Features';
-import { Location } from './components/Location';
-import { ContactForm } from './components/ContactForm';
-import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -26,26 +19,78 @@ export default function App() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+    <div className="flex flex-col min-h-screen w-full bg-brand-cream overflow-x-hidden relative">
+      {/* Background Decor Lines */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <svg className="w-full h-full opacity-20" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <path d="M-100 200C100 150 400 400 600 300C800 200 1100 500 1500 400" stroke="#3A5A40" strokeWidth="2" />
+          <path d="M-50 600C200 550 500 750 800 650C1100 550 1300 850 1600 700" stroke="#3A5A40" strokeWidth="2" />
+          <path d="M200 -100C300 100 100 400 300 600" stroke="#3A5A40" strokeWidth="2" />
+        </svg>
+      </div>
+
       {/* Scroll Progress Bar */}
       <div
         className="fixed top-0 left-0 h-1 bg-brand-green z-50 transition-all duration-100"
         style={{ width: `${scrollProgress * 100}%` }}
       />
 
-      <Header />
+      <div className="relative z-10">
+        <Header />
+      </div>
 
-      <main className="flex-grow">
-        <Hero />
-        <About />
-        <Features />
-        <Services />
-        <Location />
-        <ContactForm />
-        <CtaBanner />
+      <main className="flex-grow flex items-center justify-center p-4 md:p-8 relative z-10 w-full min-h-[calc(100vh-200px)]">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full max-w-[1400px] mx-auto place-items-center mt-12 mb-12">
+          <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
+            <iframe
+              src="http://163.245.202.161:8080/e73b7ea5-f110-4031-b644-48b77b2a6a85.html"
+              width="640"
+              height="360"
+              frameBorder="0"
+              scrolling="no"
+              allowFullScreen={true}
+              className="max-w-full"
+            />
+          </div>
+          <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
+            <iframe
+              src="http://163.245.202.161:8080/9c1ae01d-77a8-4eed-ba26-ef908cf65c35.html"
+              width="640"
+              height="360"
+              frameBorder="0"
+              scrolling="no"
+              allowFullScreen={true}
+              className="max-w-full"
+            />
+          </div>
+          <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
+            <iframe
+              src="http://163.245.202.161:8080/e594b2b8-14ac-43f9-a867-de18fb6cfda9.html"
+              width="640"
+              height="360"
+              frameBorder="0"
+              scrolling="no"
+              allowFullScreen={true}
+              className="max-w-full"
+            />
+          </div>
+          <div className="w-full flex justify-center rounded-2xl overflow-hidden shadow-2xl" style={{ border: '4px solid var(--color-brand-cream)' }}>
+            <iframe
+              src="http://163.245.202.161:8080/70071789-b3df-4715-8c35-f3eb2aaff209.html"
+              width="640"
+              height="360"
+              frameBorder="0"
+              scrolling="no"
+              allowFullScreen={true}
+              className="max-w-full"
+            />
+          </div>
+        </div>
       </main>
 
-      <Footer />
+      <div className="relative z-10 w-full">
+        <Footer />
+      </div>
     </div>
   );
 }

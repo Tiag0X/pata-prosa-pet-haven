@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-dark text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 border-b border-white/10 pb-12">
 
           {/* Brand */}
           <div className="space-y-6">
@@ -20,17 +20,6 @@ export const Footer: React.FC = () => {
             <p className="text-brand-sage leading-relaxed">
               Espaço de Convivência Pet Friendly. Onde cuidado, carinho e bem-estar caminham juntos.
             </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Links Rápidos</h3>
-            <ul className="space-y-4 text-brand-sage">
-              <li><a href="#sobre" className="hover:text-white transition-colors">Sobre Nós</a></li>
-              <li><a href="#servicos" className="hover:text-white transition-colors">Serviços</a></li>
-              <li><a href="#diferenciais" className="hover:text-white transition-colors">Diferenciais</a></li>
-              <li><a href="#contato" className="hover:text-white transition-colors">Contato</a></li>
-            </ul>
           </div>
 
           {/* Contact */}
@@ -54,7 +43,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Hours (Added extra for fullness) */}
+          {/* Hours */}
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Horário</h3>
             <ul className="space-y-4 text-brand-sage">
