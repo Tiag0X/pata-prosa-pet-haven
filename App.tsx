@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MessageCircle } from 'lucide-react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
@@ -91,6 +92,18 @@ export default function App() {
       <div className="relative z-10 w-full">
         <Footer />
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/5551998188193?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20agendamento."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-full font-bold shadow-2xl hover:bg-[#1ebd5b] hover:scale-105 active:scale-95 transition-all text-sm sm:text-base border-2 border-white/20"
+        title="Agendar no WhatsApp"
+      >
+        <MessageCircle size={22} className="fill-white" />
+        <span className="hidden sm:inline">Agendar</span>
+      </a>
     </div>
   );
 }
