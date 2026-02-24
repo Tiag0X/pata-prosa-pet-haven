@@ -15,12 +15,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: only light !important;
+    color-scheme: light dark;
   }
 
   body {
     background-color: var(--color-brand-cream) !important;
-    background-image: linear-gradient(transparent, transparent) !important;
+    /* OVERRIDE AUTO-DARK BY PAINTING A SOLID IMAGE OVER IT */
+    background-image: linear-gradient(var(--color-brand-cream), var(--color-brand-cream)) !important;
     color: var(--color-brand-dark) !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -46,8 +47,27 @@
 }
 
 /* ANTI-FORCE-DARK-MODE HACK - Android Mobile */
-[class*="bg-brand-cream"],
-[class*="bg-brand-dark"],
+[class*="bg-brand-cream"] {
+  background-image: linear-gradient(var(--color-brand-cream), var(--color-brand-cream)) !important;
+}
+
+[class*="bg-brand-dark"] {
+  background-color: var(--color-brand-dark) !important;
+  background-image: linear-gradient(var(--color-brand-dark), var(--color-brand-dark)) !important;
+  color: #ffffff !important;
+}
+
 [class*="bg-brand-green"] {
-  background-image: linear-gradient(transparent, transparent) !important;
+  background-color: var(--color-brand-green) !important;
+  background-image: linear-gradient(var(--color-brand-green), var(--color-brand-green)) !important;
+}
+
+[class*="text-brand-dark"] {
+  color: var(--color-brand-dark) !important;
+  -webkit-text-fill-color: var(--color-brand-dark) !important;
+}
+
+[class*="text-brand-green"] {
+  color: var(--color-brand-green) !important;
+  -webkit-text-fill-color: var(--color-brand-green) !important;
 }
