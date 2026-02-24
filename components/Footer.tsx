@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-dark text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 border-b border-white/10 pb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 mb-16 border-b border-white/10 pb-12">
 
           {/* Brand */}
           <div className="space-y-6">
@@ -32,32 +32,13 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} />
-                <span>(51) 9045-0171</span>
+                <span>(51) 99818-8193</span>
               </li>
               <li className="flex items-center gap-3">
                 <Instagram size={18} />
                 <a href="https://www.instagram.com/pataeprosa/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors">
                   @pataeprosa
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Hours */}
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Horário</h3>
-            <ul className="space-y-4 text-brand-sage">
-              <li className="flex justify-between">
-                <span>Seg - Sex</span>
-                <span className="text-white">08:00 - 19:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sábado</span>
-                <span className="text-white">09:00 - 17:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Domingo</span>
-                <span className="text-white">Fechado</span>
               </li>
             </ul>
           </div>
