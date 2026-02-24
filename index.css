@@ -71,3 +71,18 @@
   color: var(--color-brand-green) !important;
   -webkit-text-fill-color: var(--color-brand-green) !important;
 }
+
+[class*="text-white"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+[class*="text-brand-sage"] {
+  color: var(--color-brand-sage) !important;
+  -webkit-text-fill-color: var(--color-brand-sage) !important;
+}
+
+[class*="text-brand-gold"] {
+  color: var(--color-brand-gold) !important;
+  -webkit-text-fill-color: var(--color-brand-gold) !important;
+}
