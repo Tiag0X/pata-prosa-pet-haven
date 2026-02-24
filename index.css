@@ -15,12 +15,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: light;
+    color-scheme: only light !important;
   }
 
   body {
-    background-color: var(--color-brand-cream);
-    color: var(--color-brand-dark);
+    background-color: var(--color-brand-cream) !important;
+    background-image: linear-gradient(transparent, transparent) !important;
+    color: var(--color-brand-dark) !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -42,4 +43,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3A5A40;
+}
+
+/* ANTI-FORCE-DARK-MODE HACK - Android Mobile */
+[class*="bg-brand-cream"],
+[class*="bg-brand-dark"],
+[class*="bg-brand-green"] {
+  background-image: linear-gradient(transparent, transparent) !important;
 }
