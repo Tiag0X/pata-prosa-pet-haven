@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
         <div className="flex justify-center items-center py-6">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/verde.png" alt="Pata & Prosa" className="h-32 sm:h-40 w-auto hover:scale-105 transition-transform cursor-pointer" />
+            <img src="/verde.png" alt="Pata & Prosa" width={1000} height={320} className="h-32 sm:h-40 w-auto hover:scale-105 transition-transform cursor-pointer" />
           </div>
         </div>
       </div>

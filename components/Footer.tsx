@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <div className="bg-brand-cream text-brand-dark p-2 rounded-xl">
-                <PawPrint size={24} fill="currentColor" />
+                <PawPrint size={24} fill="currentColor" aria-hidden="true" />
               </div>
               <div className="leading-tight font-display font-bold text-xl">
                 Pata & Prosa
@@ -27,16 +27,16 @@ export const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Fale Conosco</h3>
             <ul className="space-y-4 text-brand-sage">
               <li className="flex items-start gap-3">
-                <MapPin className="shrink-0 mt-1" size={18} />
+                <MapPin className="shrink-0 mt-1" size={18} aria-hidden="true" />
                 <span>Rua Artur Rocha, 193<br />Auxiliadora, Porto Alegre - RS<br />90450-171</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={18} />
+                <Phone size={18} aria-hidden="true" />
                 <span>(51) 99818-8193</span>
               </li>
               <li className="flex items-center gap-3">
-                <Instagram size={18} />
-                <a href="https://www.instagram.com/pataeprosa/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors">
+                <Instagram size={18} aria-hidden="true" />
+                <a href="https://www.instagram.com/pataeprosa/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded-sm">
                   @pataeprosa
                 </a>
               </li>
